@@ -1,0 +1,25 @@
+rules:
+  - id: rain-soon
+    metric: precipitation_probability
+    operator: ">="
+    threshold: 70
+    within_hours: 3
+    message: "🌧️ Rain likely in {city} around {time} ({value}% chance)"
+  - id: heat
+    metric: temperature_2m
+    operator: ">="
+    threshold: 33
+    within_hours: 24
+    message: "🔥 {city} will hit {value}°C around {time}"
+  - id: cold
+    metric: temperature_2m
+    operator: "<="
+    threshold: 8
+    within_hours: 24
+    message: "🥶 {city} will drop to {value}°C around {time}"
+  - id: wind
+    metric: wind_speed_10m
+    operator: ">="
+    threshold: 40
+    within_hours: 12
+    message: "💨 Strong wind in {city}: {value} km/h around {time}"

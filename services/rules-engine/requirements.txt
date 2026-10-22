@@ -1,0 +1,2 @@
+redis==5.*
+pyyaml==6.*
